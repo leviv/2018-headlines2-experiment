@@ -1,7 +1,14 @@
-$(document).ready(function(){
-
-  
+$(function() {            
+    linkText = "";
+    $(".custom-button").click(function() {  
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+        } else {
+            $(this).addClass("active");
+        }
+    });
 });
+
 
 $(document).ready(function() {
 
@@ -58,7 +65,7 @@ $(document).ready(function() {
          linkText = linkText.replace(/\r?\n|\r/g, " ");
          // if there's multiple spaces, condense them
          linkText = linkText.replace(/\s\s\s/g, "");
-         logClick('Link: '+ linkText, url);
+         logClick('Link: '+ linkText, 'page-link');
          window.location.href = url;
     });
 

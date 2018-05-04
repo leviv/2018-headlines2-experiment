@@ -1,3 +1,30 @@
+.custom-button {
+    background: #fff;
+    border: 2px solid #5181eb;
+    padding: 15px;
+    width: 49%;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s
+}
+
+.custom-button p {
+    
+}
+
+.custom-button:hover {
+    background: rgb(134, 168, 242);
+    
+}
+
+.custom-button.active {
+    background: #5181eb;
+}
+
 .alert,
 .well {
     padding: 1rem

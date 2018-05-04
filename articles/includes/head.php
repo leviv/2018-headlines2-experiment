@@ -16,6 +16,9 @@
     <meta property="og:image" content="<? echo dirname(dirname($current_url)) .'/articles/'. $featured_img;?>"/>
     <meta property="og:url" content="<? echo $current_url;?>"/>
     <meta property="og:description" content="<? echo strip_tags(substr($article,0,240))?>&hellip;" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+
 
     <link rel="stylesheet" href="../../dist/css/styles.min.css" />
     <!-- Typekit Fonts -->
@@ -27,7 +30,7 @@
     <![endif]-->
 
     <script>
-        var studyType = '<? echo $identifier;?>';
+        var studyType = 'Article - ' + '<? echo $article_identifier;?>' + '|Headline - ' + '<? echo $headline_identifier;?>';
     </script>
 
 </head>

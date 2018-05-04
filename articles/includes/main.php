@@ -19,7 +19,23 @@
         <hr>
 
         <? echo $article;?>
+        
+        <a href="javascript:void(0);">
+            <button class="like-button custom-button">
+                <i class="fas fa-thumbs-up"></i>
 
+                Like
+            </button> 
+        </a>
+        
+        
+        <a href="javascript:void(0);">
+            <button class="share-button custom-button">
+                <i class="fas fa-share"></i>
+
+                Share
+            </button>
+        </a>
         <?php
 
         include('comments.php');
