@@ -5,7 +5,7 @@ $pubdate = 'Mar. 19, 2018';
 
 $featured_img_caption = '';
 $article = '
-<p>' + $lead + '</p>
+<p>' . $lead . '</p>
 
 <p>The immigration issue was never easy. But it hasn’t always been this confusing.</p>
 
