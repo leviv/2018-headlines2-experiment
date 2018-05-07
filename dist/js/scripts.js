@@ -1,17 +1,16 @@
-$(function() {            
-    linkText = "";
+$(document).ready(function() {
     $(".custom-button").click(function() {  
+        url = $(this).attr('href');
+        linkText = $.trim($(this).text());
+        linkText = linkText.replace(/\r?\n|\r/g, " ");
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
+            logClick('Link: Un'+ linkText, 'page-link');
         } else {
             $(this).addClass("active");
+            logClick('Link: '+ linkText, 'page-link');
         }
     });
-});
-
-
-$(document).ready(function() {
-
     var closedElements = ['footnote', 'category', 'author'];
 
     // add in learn more category button
@@ -57,17 +56,6 @@ $(document).ready(function() {
         'content': '',
     };
 
-    // track all link clicks
-    $(document).on('click', 'a', function(e) {
-         e.preventDefault();
-         url = $(this).attr('href');
-         linkText = $.trim($(this).text());
-         linkText = linkText.replace(/\r?\n|\r/g, " ");
-         // if there's multiple spaces, condense them
-         linkText = linkText.replace(/\s\s\s/g, "");
-         logClick('Link: '+ linkText, 'page-link');
-         window.location.href = url;
-    });
 
 
     // loop through footnotes and create their variables
